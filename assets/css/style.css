@@ -1,0 +1,2468 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Neue Montreal';
+    src: url("../NeueMontreal/NeueMontreal-Regular.woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Neue Montreal';
+    src: url("../NeueMontreal/NeueMontreal-Medium.woff");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Neue Montreal';
+    src: url("../NeueMontreal/NeueMontreal-Bold.woff");
+    font-weight: 700;
+}
+
+html {
+    padding: 0px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+body {
+    margin: 0px auto;
+    padding: 0px;
+}
+
+p {
+    margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.navbar-toggler:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a,
+button {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+svg {
+    transition: .3s all ease;
+}
+
+figure {
+    margin: 0;
+}
+
+._toggler {
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+._toggler.collapsed ._header_coach_navbar_toggle_btn_icon {
+    background-image: url("../image/menu.png") !important;
+    transition: 0.1s all ease-in-out;
+    max-width: 18px;
+}
+
+._toggler ._header_coach_navbar_toggle_btn_icon {
+    background-image: url("../image/menu_close.png") !important;
+    transition: 0.1s all ease-in-out;
+    max-width: 18px;
+}
+
+
+/* header-nav start */
+._coach_header_wrapper {
+    padding: 10px 0;
+    background-color: var(--bg1);
+    overflow: hidden;
+    position: relative;
+}
+
+._coach_header_left_layer {
+    position: absolute;
+    content: "";
+    left: -74px;
+    top: 170px;
+    width: 613px;
+    height: 613px;
+    background: var(--bg3);
+    opacity: 0.3;
+    filter: blur(192px);
+}
+
+._coach_header_right_layer {
+    position: absolute;
+    content: "";
+    width: 685px;
+    height: 685px;
+    right: -74px;
+    top: 279px;
+    background: var(--bg4);
+    opacity: 0.3;
+    filter: blur(192px);
+}
+
+._coach_header_nav_wrapper {
+    padding: 20px 0;
+}
+
+._coach_header_nav_wrapper_list {
+    margin: 0 auto;
+    gap: 42px;
+}
+
+._coach_header_nav_wrapper_item_link {
+    font-family: 'Neue Montreal';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: var(--color1) !important;
+    display: inline-block;
+    transition: .2s all ease;
+
+    padding: 0;
+    position: relative;
+}
+
+.dropdown ._coach_header_nav_wrapper_item_link::after {
+    position: absolute;
+    content: "";
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    top: 23%;
+    right: -15px;
+    transform: rotate(45deg);
+}
+
+.dropdown .show._coach_header_nav_wrapper_item_link::after {
+    position: absolute;
+    content: "";
+    top: 46%;
+    right: -15px;
+    border: solid var(--color4);
+    border-width: 2px 0 0 2px;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+}
+
+._coach_header_nav_wrapper_item_link:hover,
+._coach_header_nav_wrapper_item_link.show,
+._coach_header_nav_wrapper_item_link:hover::after {
+    color: var(--color4) !important;
+    border-color: var(--color4);
+}
+
+._coach_header_navbar_drop {
+    background-color: var(--bg2);
+    padding: 0;
+    border-radius: 5px;
+    margin-top: 10px !important;
+    display: inherit;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+._coach_header_navbar_drop.show {
+    display: inherit;
+    visibility: visible;
+    opacity: 1;
+}
+
+._coach_header_drop_menu_item {
+    font-family: 'Neue Montreal';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: var(--color1) !important;
+    display: block;
+    padding: 7px 14px;
+}
+
+._coach_header_drop_menu_item:hover {
+    background-color: #1c1c1c;
+    color: var(--color4) !important;
+}
+
+._coach_header_nav_wrapper_item_mshow {
+    display: none;
+}
+
+._coach_header_nav_wrapper_item.dropdown {
+    padding-right: 18px;
+}
+
+._coach_header_navbar_right_list {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+._coach_header_nav_li.dropdown {
+    padding-right: 18px;
+}
+
+._coach_header_nav_right_itm {
+    font-family: 'Neue Montreal';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: var(--color1);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 4px;
+    position: relative;
+    transition: .2s all ease;
+}
+
+.dropdown ._coach_header_nav_right_itm::after {
+    position: absolute;
+    content: "";
+    top: 25%;
+    right: -15px;
+    border: solid var(--color1);
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+}
+
+.dropdown .show._coach_header_nav_right_itm::after {
+    position: absolute;
+    content: "";
+    top: 46%;
+    right: -15px;
+    border: solid var(--color4);
+    border-width: 2px 0 0 2px;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+}
+
+._coach_header_nav_right_itm:hover,
+._coach_header_nav_right_itm.show,
+._coach_header_nav_right_itm:hover::after {
+    color: var(--color4);
+    border-color: var(--color4);
+}
+
+._coach_header_navbar_drop_right {
+    background: var(--bg2);
+    padding: 0;
+    border-radius: 5px;
+    margin-top: 15px !important;
+    min-width: 64px;
+    display: inherit;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+._coach_header_navbar_drop_right.show {
+    display: inherit;
+    visibility: visible;
+    opacity: 1;
+}
+
+._coach_header_drop_menu_item_right {
+    font-family: 'Neue Montreal';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--color1);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 7px;
+    padding: 2px 10px;
+}
+
+._coach_header_drop_menu_item_right:hover {
+    background: var(--bg7);
+    color: var(--color4);
+}
+
+._coach_header_nav_login_btn_link {
+    width: 128px;
+    height: 46px;
+    background: var(--bg2) !important;
+    border-radius: 23px;
+    font-family: 'Neue Montreal';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--color1) !important;
+    transition: .2s all ease;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+._coach_header_nav_login_btn_link:hover {
+    background: var(--color3) !important;
+    color: var(--color2) !important;
+}
+
+/* header herosection start */
+._coach_header_wrap {
+    padding: 86px 0 0px;
+    z-index: 2;
+}
+
+._coach_herosection_bg_img1 {
+    background: url('../image/Ellipse4.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 613px;
+    height: 613px;
+    top: 0;
+    left: 0px;
+    background: var(--bg3);
+    opacity: 0.3;
+    filter: blur(384px);
+    z-index: -1;
+}
+
+._coach_herosection_bg_img2 {
+    background: url('../image/Ellipse5.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 685px;
+    height: 685px;
+    top: 0;
+    right: 0;
+    background: var(--bg4);
+    opacity: 0.3;
+    filter: blur(384px);
+}
+
+._coach_herosection_area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+._coach_header_herosection_title_area {
+    position: relative;
+    z-index: 1;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+._coach_header_herosection_cont_shape1 {
+    position: absolute;
+    top: 50%;
+    left: 36px;
+    z-index: -1;
+    transform: translateY(calc(-32px - 50%)) rotate(-25deg);
+}
+
+._coach_header_herosection_cont_shape2 {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(calc(-35px - 50%)) rotate(25deg);
+    z-index: -1;
+}
+
+._coach_header_herosection_title {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Neue Montreal';
+    font-size: 120px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color1);
+}
+
+._coach_header_herosection_span_cream {
+    display: block;
+    color: var(--color4);
+}
+
+._coach_header_herosection_span_white {
+    color: var(--color1);
+}
+
+._coach_header_herosection_span_light_green {
+    color: var(--color3);
+}
+
+._coach_header_herosection_text {
+    font-family: 'Neue Montreal';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--color1);
+    max-width: 42%;
+    margin: 20px auto 40px;
+    position: relative;
+    z-index: 1;
+}
+
+._coach_header_herosection_btn_area {
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    z-index: 2;
+}
+
+._coach_header_herosection_btn {
+    font-family: 'Neue Montreal';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--color2);
+    /* width: 187px; */
+    height: 58px;
+    border-radius: 29px;
+    transition: .2s all ease;
+    position: relative;
+    z-index: 1;
+    padding: 0 36px;
+}
+
+._coach_header_btn_color1 {
+    background: var(--color3) !important;
+}
+
+._coach_header_btn_color1:hover {
+    background: var(--bg5) !important;
+    color: var(--color1) !important;
+}
+
+._coach_header_btn_color2 {
+    background: var(--color1) !important;
+}
+
+._coach_header_btn_color2:hover {
+    background: var(--bg6) !important;
+    color: var(--color1) !important;
+}
+
+._coach_header_herosection_rating {
+    font-family: 'Neue Montreal';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 20px 0 100px;
+    position: relative;
+    z-index: 1;
+}
+
+._coach_header_herosection_rating_span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+._coach_header_hero_marquee_wrap {
+    border: 1px solid;
+    border-image-source: linear-gradient(92.58deg, #FFFFFF -2.48%, rgba(255, 255, 255, 0) 105%);
+    border-image-slice: 1;
+    border-left: 0;
+    border-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: var(--border);
+    backdrop-filter: blur(17px);
+    padding: 70px 0;
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+    white-space: nowrap;
+}
+
+._coach_header_hero_marquee_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 28px;
+    animation: headerAnim 30s linear infinite;
+}
+
+@keyframes headerAnim {
+    0% {
+        transform: translate(90%, 0);
+    }
+
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+._coach_header_hero_marquee_list_item {
+    font-family: 'Neue Montreal';
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2;
+    color: var(--color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: relative;
+}
+
+._coach_header_hero_marquee_list_svg {
+    display: flex;
+    align-items: center;
+}
+
+
+._coach_header-scroll_bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 28px 0;
+    cursor: pointer;
+    z-index: 2;
+    position: relative;
+}
+
+._coach_header-scroll {
+    margin-bottom: 12px;
+}
+
+._coach_header_scroll_svg svg path {
+    transition: .2s all ease;
+}
+
+._coach_header_scroll_svg:hover svg path {
+    stroke: var(--color3);
+}
+
+._coach_header-scroll_title {
+    font-family: 'Neue Montreal';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color1);
+}
+
+/*------------------------------
+ Career Coach features 1 start 
+--------------------------------*/
+._coach_features_1_wrapper {
+    padding: 170px 0;
+    position: relative;
+}
+
+._coach_features_1_left {
+    position: relative;
+}
+
+._coach_features_1_left_shape1 {
+    position: absolute;
+    content: "";
+    left: 326px;
+    top: -92px;
+}
+
+._coach_features_1_left_shape2 {
+    position: absolute;
+    content: "";
+    left: 102px;
+    top: -54px;
+}
+
+._coach_features_1_left_shape3 {
+    position: absolute;
+    content: "";
+    left: 143px;
+    top: 16px;
+}
+
+._coach_features_1_left_shape4 {
+    position: absolute;
+    content: "";
+    left: 227px;
+    top: 106px;
+}
+
+._coach_features_1_left_shape5 {
+    position: absolute;
+    content: "";
+    left: 322px;
+    top: 165px;
+}
+
+._coach_features_1_left_shape6 {
+    position: absolute;
+    content: "";
+    bottom: -21px;
+    left: 0;
+}
+
+._coach_features_1_right_title {
+    font-family: 'Neue Montreal';
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 1.2;
+    text-transform: capitalize;
+    color: var(--color2);
+    max-width: 100%;
+    margin: 0 0 20px;
+}
+
+._coach_features_1_span_cream {
+    color: var(--color4);
+}
+
+._coach_features_1_right_para {
+    font-family: 'Neue Montreal';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--color5);
+    max-width: 90%;
+    margin: 0 0 40px;
+}
+
+._coach_features_1_right_btn_link {
+    width: 160px;
+    height: 58px;
+    background-color: var(--color3) !important;
+    border-radius: 29px;
+    font-family: 'Neue Montreal';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--color2) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s all ease;
+}
+
+._coach_features_1_right_btn_link:hover {
+    background-color: var(--bg2) !important;
+    color: var(--color1) !important;
+}
+
+._coach_features_1_shape {
+    position: absolute;
+    content: "";
+    bottom: 70px;
+    right: 0;
+}
+
+/*------------------------------
+ Career Coach features 2 start 
+--------------------------------*/
+._coach_features_2_wrapper {
+    padding: 100px 0;
+    background: var(--color2);
+}
+
+._coach_features_2_left_title {
+    font-family: 'Neue Montreal';
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 1.2;
+    text-transform: capitalize;
+    color: var(--color1);
+    max-width: 100%;
+    margin: 0 0 20px;
+}
+
+._coach_features_2_span_cream {
+    color: var(--color4);
+}
+
+._coach_features_2_light_green {
+    color: var(--color3);
+}
+
+._coach_features_2_left_para {
+    font-family: 'Neue Montreal';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--color1);
+    max-width: 79%;
+    margin: 0 0 40px;
+}
+
+._coach_features_2_left_btn_link {
+    width: 160px;
+    height: 58px;
+    background-color: var(--color1) !important;
+    border-radius: 29px;
+    font-family: 'Neue Montreal';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--color2) !important;
+    transition: .2s all ease;
+}
+
+._coach_features_2_left_btn_link:hover {
+    background-color: var(--color3) !important;
+
+}
+
+/*------------------------------
+ Career Coach rating start 
+--------------------------------*/
+._coach_rating_wrapper {
+    background-color: var(--bg8);
+    padding: 100px 135px;
+    position: relative;
+}
+
+._coach_rating_cont {
+    background-color: var(--color1);
+    padding: 70px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+}
+
+._coach_rating_cont_title {
+    font-family: 'Neue Montreal';
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 48px;
+}
+
+._coach_rating_cont_span_cream {
+    color: var(--color4);
+}
+
+._coach_rating_star_rating {
+    display: flex;
+    margin-bottom: 28px;
+    gap: 14px;
+}
+
+._coach_rating_cont_para {
+    font-family: 'Neue Montreal';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--color5);
+    max-width: 50%;
+}
+
+._coach_rating_shape1 {
+    position: absolute;
+    content: "";
+    top: 23px;
+    left: 68px;
+}
+
+._coach_rating_shape1 svg {
+    z-index: 1;
+}
+
+._coach_rating_shape2 {
+    position: absolute;
+    content: "";
+    bottom: 23px;
+    right: 65px;
+}
+
+/*------------------
+ Career Coach  start 
+--------------------*/
+._coach_wrapper {
+    margin: 170px 0 0;
+}
+
+._coach_top_cont {
+    margin-bottom: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+._coach_top_cont_title {
+    font-family: 'Neue Montreal';
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    color: var(--color2);
+    max-width: 48%;
+}
+
+._coach_top_cont_span_cream {
+    color: var(--color4);
+}
+
+._coach_top_cont_para {
+    font-family: 'Neue Montreal';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    color: var(--color5);
+    max-width: 48%;
+}
+
+._coach_card_cont {
+    gap: 16px;
+}
+
+._coach_card {
+    padding: 30px;
+    border-radius: 12px;
+    margin: 0 0 16px;
+}
+
+._card_1 {
+    background-color: var(--bg8);
+}
+
+._coach_card_top_bg_img_1 {
+    background: var(--bg9);
+    border-radius: 12px;
+    padding-top: 30px;
+}
+
+._coach_card_top_img {
+    margin: 0 auto;
+}
+
+._coach_card_btm {
+    margin: 30px 0 0;
+}
+
+._coach_card_btm_title {
+    font-family: 'Neue Montreal';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    text-transform: capitalize;
+    color: var(--color2);
+    margin: 0 0 12px;
+}
+
+._coach_card_btm_para {
+    margin: 0 0 28px;
+    font-family: 'Neue Montreal';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--color2);
+    max-width: 88%;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+._coach_card_btm_btn_link {
+    width: 160px;
+    height: 58px;
+    background: var(--bg2) !important;
+    border-radius: 29px;
+    font-family: 'Neue Montreal';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--color1) !important;
+    transition: .2s all ease;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+._coach_card_btm_btn_link:hover {
+    background: var(--color1) !important;
+    color: var(--bg1) !important;
+    border: 1px solid var(--bg1) !important;
+}
+
+._coach_card_top_bg_img_2 {
+    background: #FF914B;
+    border-radius: 12px;
+    padding-top: 30px;
+}
+
+._card_2 {
+    background-color: var(--color4);
+}
+
+._card_3 {
+    background-color: var(--bg10);
+}
+
+._coach_card_top_bg_img_3 {
+    background: var(--bg11);
+    border-radius: 12px;
+    padding-top: 30px;
+}
+
+._card_4 {
+    background-color: var(--bg12);
+}
+
+._coach_card_top_bg_img_4 {
+    background-color: var(--bg13);
+    border-radius: 12px;
+    padding-top: 30px;
+}
+
+/*-------------------------------
+ Career Coach How it works start
+---------------------------------*/
+._coach_works_wrapper {
+    padding: 170px 0 0;
+    position: relative;
+}
+
+._coach_works_left_title {
+    font-family: 'Neue Montreal';
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 1.2;
+    text-transform: capitalize;
+    color: var(--color2);
+    max-width: 100%;
+    margin: 0 0 20px;
+}
+
+._coach_works_left_para {
+    font-family: 'Neue Montreal';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--color5);
+    max-width: 77%;
+}
+
+._coach_works_group {
+    margin-bottom: 30px;
+}
+
+._coach_works_group_title {
+    font-family: 'Neue Montreal';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--color2);
+    margin: 22px 0 12px;
+}
+
+._coach_works_group_txt {
+    font-family: 'Neue Montreal';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color5);
+    max-width: 88%;
+}
+
+._coach_works_shape {
+    position: absolute;
+    content: "";
+    bottom: 10px;
+    left: 0;
+}
+
+/*-------------------------------
+ Career Coach testimonials start
+---------------------------------*/
+._coach_testimonial_wrapper {
+    padding: 170px 0 0;
+}
+
+._coach_testimonial_wrap {
+    background-color: var(--color2);
+    position: relative;
+    padding: 0 0 100px;
+}
+
+._coach_testimonial_top_cont {
+    position: absolute;
+    content: "";
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -72%);
+}
+
+.splide__track {
+    padding: 320px 0 100px;
+    margin-top: -120px;
+}
+
+._coach_testimonial_title {
+    font-family: 'Neue Montreal';
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--color1);
+    max-width: 89%;
+    margin: 0 auto 38px;
+}
+
+._coach_testimonial_span_cream {
+    color: var(--color4);
+}
+
+._coach_testimonial_light_green {
+    color: var(--color3);
+}
+
+._coach_testimonial_name {
+    font-family: 'Neue Montreal';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--color1);
+    margin: 0 0 6px;
+}
+
+._coach_testimonial_smtitle {
+    font-family: 'Neue Montreal';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    color: var(--color6);
+}
+
+._coach_testimonial_shape_1 {
+    position: absolute;
+    content: "";
+    top: 55px;
+    left: 0;
+}
+
+._coach_testimonial_shape_2 {
+    position: absolute;
+    content: "";
+    bottom: 55px;
+    right: 0;
+}
+
+
+.splide__pagination {
+    position: absolute;
+    content: "";
+    left: 47%;
+    bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.splide__pagination__page {
+    width: 24px;
+    height: 4px;
+    background-color: var(--color1) !important;
+    border-radius: 2px;
+    border: 0;
+}
+
+.splide__pagination__page.is-active {
+    background-color: var(--color4) !important;
+}
+
+/*-------------------------------
+ Career Coach footer start
+---------------------------------*/
+._coach_footer_wrapper {
+    background: var(--color4);
+}
+
+._coach_footer_top_wrap {
+    padding: 100px 0 55px;
+}
+
+._coach_footer_logo {
+    margin: 0 0 12px;
+}
+
+._coach_footer_left_cont_title {
+    font-family: 'Neue Montreal';
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.2;
+    color: var(--color2);
+    max-width: 85%;
+    margin: 0 0 28px;
+}
+
+._coach_footer_left_cont_btn_link {
+    width: 187px;
+    height: 58px;
+    background-color: var(--color2) !important;
+    border-radius: 29px;
+    font-family: 'Neue Montreal';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--color1) !important;
+}
+
+._coach_footer_left_cont_btn_link:hover {
+    background-color: var(--color1) !important;
+    color: var(--color2) !important;
+}
+
+._coach_footer_title {
+    font-family: 'Neue Montreal';
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.2;
+    color: var(--color2);
+    margin: 0 0 24px;
+}
+
+._coach_footer_list_item {
+    margin: 0 0 18px;
+}
+
+._coach_footer_list_item_link {
+    font-family: 'Neue Montreal';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--color2) !important;
+}
+
+._coach_footer_list_item_link:hover {
+    color: blue !important;
+}
+
+._footer_last_item {
+    margin: 0 0 0;
+}
+
+._coach_footer_btm_wrap {
+    padding: 28px 0;
+    border-top: 1px solid var(--color2);
+
+}
+
+._coach_footer_btm_list {
+    display: flex;
+    gap: 28px;
+}
+
+._coach_footer_btm_link {
+    font-family: 'Neue Montreal';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: var(--color2) !important;
+    transition: .2s all ease;
+}
+
+._coach_footer_btm_link:hover {
+    color: blue !important;
+}
+
+._coach_footer_btm_txt {
+    font-family: 'Neue Montreal';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: var(--color2);
+    text-align: right;
+}
+
+/* responsive */
+/* Desktop/Laptop */
+@media only screen and (min-width: 1600px) {
+    ._coach_rating_shape1 {
+        top: 23px;
+        left: 231px;
+    }
+    ._coach_rating_shape2 {
+        bottom: 23px;
+        right: 236px;
+    }
+}
+/* large device */
+@media(max-width:1399px) {
+    ._coach_header_hero_marquee_list {
+        gap: 21px;
+    }
+
+    ._coach_header_herosection_text {
+        max-width: 50%;
+    }
+
+    ._coach_features_1_right {
+        padding-left: 37px;
+    }
+
+    ._coach_features_1_right_title {
+        font-size: 48px;
+    }
+
+    ._coach_features_1_right_para {
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    ._coach_features_2_left_para {
+        max-width: 84%;
+    }
+
+    ._coach_top_cont_para {
+        max-width: 51%;
+    }
+
+    ._coach_card_btm_para {
+        max-width: 100%;
+    }
+
+    ._coach_works_left_para {
+        max-width: 89%;
+    }
+
+    ._coach_works_group_txt {
+        max-width: 94%;
+    }
+
+    ._coach_testimonial_title {
+        max-width: 87%;
+    }
+}
+
+@media(max-width:1199px) {
+    ._coach_header_herosection_title {
+        font-size: 90px;
+    }
+
+    ._coach_header_nav_wrapper_list {
+        gap: 27px;
+    }
+
+    ._coach_header_hero_marquee_list_item {
+        font-size: 30px;
+    }
+
+    ._coach_header_hero_marquee_wrap {
+        padding: 55px 0;
+    }
+
+    ._coach_header_herosection_cont_shape2 {
+        width: 135px;
+        transform: translateY(calc(-18px - 50%)) rotate(25deg);
+    }
+
+    ._coach_header_herosection_cont_shape1 {
+        top: 50%;
+        left: 21px;
+        width: 135px;
+        transform: translateY(calc(-21px - 50%)) rotate(-25deg);
+    }
+
+    ._coach_features_1_right_title {
+        font-size: 40px;
+    }
+
+    ._coach_features_1_right_para {
+        font-size: 17px;
+        margin: 0 0 30px;
+    }
+
+    ._coach_features_1_left_shape1 {
+        left: 270px;
+        top: -92px;
+    }
+
+    ._coach_features_2_left_title {
+        font-size: 43px;
+    }
+
+    ._coach_rating_cont_para {
+        max-width: 80%;
+    }
+
+    ._coach_top_cont_title {
+        font-size: 45px;
+        max-width: 100%;
+    }
+
+    ._coach_works_left_title {
+        font-size: 43px;
+    }
+
+    ._coach_works_group_txt {
+        font-size: 15px;
+        max-width: 100%;
+    }
+
+    .splide__pagination {
+        left: 46%;
+    }
+
+    ._coach_testimonial_top_cont {
+        transform: translate(-50%, -63%);
+    }
+
+    ._coach_footer_list_item_link,
+    ._coach_footer_btm_txt,
+    ._coach_footer_btm_link {
+        font-size: 15px;
+    }
+
+    ._coach_footer_top_wrap {
+        padding: 80px 0 55px;
+    }
+}
+/* Ipad pro */
+@media(max-width:991px) {
+    ._coach_header_nav_left {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    ._coach_header_navbar_drop {
+        display: none;
+    }
+
+    ._coach_header_navbar_drop {
+        background-color: #281e2a;
+    }
+
+    ._coach_header_nav_wrapper_list {
+        gap: 15px;
+        background-color: var(--bg2) !important;
+        padding: 15px;
+    }
+
+    ._coach_header_nav_wrapper_item_mshow {
+        display: flex;
+        justify-content: center;
+    }
+
+    ._coach_header_nav_right {
+        display: none;
+    }
+
+    ._coach_header_nav_wrapper_item {
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+
+    ._coach_header_drop_menu_li {
+        text-align: center;
+    }
+
+    ._coach_header_herosection_cont_shape1 {
+        left: 12px;
+        transform: translateY(calc(-23px - 50%)) rotate(-25deg);
+    }
+
+    ._coach_header_herosection_cont_shape2 {
+        right: -10px;
+        transform: translateY(calc(-18px - 50%)) rotate(25deg);
+    }
+
+    ._coach_header_herosection_title {
+        font-size: 85px;
+    }
+
+    ._coach_header_herosection_text {
+        max-width: 99%;
+    }
+
+    ._coach_header_herosection_rating {
+        padding: 20px 0 40px;
+    }
+
+    ._coach_header_hero_marquee_wrap {
+        padding: 45px 0;
+    }
+
+    ._coach_header_hero_marquee_list {
+        gap: 15px;
+    }
+
+    ._coach_header_hero_marquee_list_item {
+        font-size: 28px;
+        gap: 10px;
+    }
+
+    ._coach_header-scroll_title {
+        font-size: 16px;
+    }
+
+    ._coach_features_1_right {
+        padding: 55px 0 0;
+    }
+
+    ._coach_features_1_left_map_img {
+        margin: 0 auto;
+    }
+
+    ._coach_features_1_left_shape1 {
+        left: 440px;
+        top: -100px;
+    }
+
+    ._coach_features_1_left_shape5 {
+        left: 435px;
+        top: 165px;
+    }
+
+    ._coach_features_1_left_shape2 {
+        left: 204px;
+        top: -47px;
+    }
+
+    ._coach_features_1_left_shape3 {
+        left: 260px;
+        top: 16px;
+    }
+
+    ._coach_features_1_left_shape4 {
+        left: 304px;
+        top: 106px;
+    }
+
+    ._coach_features_1_left_shape6 {
+        bottom: -8px;
+        left: 114px;
+    }
+
+    ._coach_features_2_left_para {
+        max-width: 100%;
+    }
+
+    ._coach_features_1_shape {
+        bottom: 150px;
+    }
+
+    ._coach_features_1_wrapper {
+        padding: 170px 0 80px;
+    }
+
+    ._coach_features_2_wrapper {
+        padding: 80px 0;
+    }
+
+    ._coach_features_2_left {
+        padding: 0 0 60px;
+    }
+
+    ._coach_features_2_left_title {
+        font-size: 40px;
+    }
+
+    ._coach_rating_cont_title {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    ._coach_top_cont {
+        margin-bottom: 50px;
+    }
+
+    ._coach_top_cont_para {
+        max-width: 80%;
+    }
+
+    ._coach_works_wrapper {
+        padding: 80px 0;
+    }
+
+    ._coach_works_left {
+        padding-bottom: 50px;
+    }
+
+    ._coach_works_left_title {
+        font-size: 40px;
+    }
+
+    .splide__track {
+        padding: 295px 0 70px;
+        margin-top: -163px;
+    }
+
+    ._coach_testimonial_top_cont {
+        transform: translate(-50%, -55%);
+    }
+
+    ._coach_testimonial_name {
+        font-size: 20px;
+    }
+
+    ._coach_testimonial_smtitle {
+        font-size: 15px;
+    }
+
+    .splide__pagination {
+        left: 45%;
+    }
+
+    ._coach_testimonial_title {
+        max-width: 100%;
+        font-size: 30px;
+    }
+
+    ._coach_testimonial_wrapper {
+        padding: 135px 0 0;
+    }
+
+    ._coach_works_left_para {
+        font-size: 18px;
+    }
+
+    ._coach_footer_left_cont {
+        padding-bottom: 50px;
+    }
+
+    ._coach_footer_top_wrap {
+        padding: 50px 0;
+    }
+
+    ._coach_footer_title {
+        margin: 0 0 15px;
+    }
+
+    ._coach_footer_left_cont_btn_link {
+        width: 150px;
+        height: 50px;
+        font-size: 16px;
+    }
+}
+/* Ipad/Mobile L */
+@media(max-width:767px) {
+    ._coach_header_herosection_title {
+        font-size: 60px;
+    }
+
+    ._coach_header_wrap {
+        padding: 50px 0 0px;
+    }
+
+    ._coach_header_herosection_text {
+        max-width: 100%;
+        font-size: 17px;
+        margin: 20px auto 30px;
+    }
+
+    ._coach_header_herosection_btn {
+        font-size: 16px;
+        height: 50px;
+        padding: 0 25px;
+    }
+
+    ._coach_header_herosection_rating {
+        padding: 20px 0 30px;
+        font-size: 18px;
+    }
+
+    ._coach_header_hero_marquee_wrap {
+        padding: 25px 0;
+    }
+
+    ._coach_header_hero_marquee_list_item {
+        font-size: 20px;
+        gap: 10px;
+    }
+
+    ._coach_header-scroll_title {
+        font-size: 14px;
+    }
+
+    ._coach_header_left_layer {
+        top: 77px;
+        width: 450px;
+        height: 500px;
+    }
+
+    ._coach_header_right_layer {
+        width: 450px;
+        height: 500px;
+        right: -74px;
+        top: 77px;
+    }
+
+    ._coach_header_herosection_cont_shape2 {
+        right: -62px;
+        transform: translateY(calc(-35px - 50%)) rotate(25deg);
+    }
+
+    ._coach_header_herosection_cont_shape1 {
+        left: -58px;
+        transform: translateY(calc(-33px - 50%)) rotate(-25deg);
+    }
+
+    ._coach_features_1_left_shape1 {
+        left: 374px;
+        top: -100px;
+    }
+
+    ._coach_features_1_left_shape2 {
+        left: 129px;
+        top: -47px;
+    }
+
+    ._coach_features_1_left_shape3 {
+        left: 200px;
+        top: 0px;
+    }
+
+    ._coach_features_1_left_shape6 {
+        bottom: -8px;
+        left: 19px;
+    }
+
+    ._coach_features_1_left_shape5 {
+        left: 349px;
+        top: 165px;
+    }
+
+    ._coach_features_1_left_shape4 {
+        left: 272px;
+        top: 106px;
+    }
+
+    ._coach_features_1_right_title {
+        font-size: 27px;
+        text-align: center;
+    }
+
+    ._coach_features_1_right_para {
+        margin: 0 0 25px;
+        text-align: center;
+    }
+
+    ._coach_features_1_right_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    ._coach_features_1_right_btn_link {
+        width: 150px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    ._coach_features_2_left_title {
+        text-align: center;
+        font-size: 29px;
+    }
+
+    ._coach_features_2_left_para {
+        font-size: 16px;
+        margin: 0 0 30px;
+        text-align: center;
+    }
+
+    ._coach_features_2_left_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    ._coach_features_2_left_btn_link {
+        width: 150px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    ._coach_rating_wrapper {
+        padding: 80px 100px;
+    }
+
+    ._coach_rating_cont {
+        padding: 35px 0;
+    }
+
+    ._coach_rating_cont_title {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    ._coach_rating_cont_para {
+        font-size: 17px;
+        max-width: 100%;
+    }
+
+    ._coach_wrapper {
+        margin: 80px 0 0;
+    }
+
+    ._coach_top_cont_title {
+        font-size: 30px;
+        max-width: 100%;
+        margin-bottom: 12px;
+    }
+
+    ._coach_top_cont_para {
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    ._coach_top_cont {
+        margin-bottom: 30px;
+    }
+
+    ._coach_card_btm {
+        margin: 20px 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    ._coach_card_btm_para {
+        margin: 0 0 20px;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    ._coach_card_btm_btn_link {
+        width: 140px;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    ._coach_works_left_title {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    ._coach_works_left_para {
+        font-size: 16px;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    ._coach_testimonial_wrapper {
+        padding: 100px 0 0;
+    }
+
+    .splide__track {
+        padding: 250px 0 50px;
+        margin-top: -150px;
+    }
+
+    .splide__pagination {
+        left: 44%;
+        bottom: 56px;
+    }
+
+    ._coach_testimonial_wrap {
+        padding: 0 0 70px;
+    }
+
+    ._coach_testimonial_title {
+        font-size: 26px;
+    }
+
+    ._coach_footer_list_item {
+        margin: 0 0 13px;
+    }
+
+    ._coach_footer_ul {
+        margin-bottom: 41px;
+    }
+
+    ._coach_footer_btm_list {
+        display: flex;
+        gap: 17px;
+    }
+
+    ._coach_footer_list_item_link,
+    ._coach_footer_btm_txt,
+    ._coach_footer_btm_link {
+        font-size: 14px;
+    }
+
+    ._coach_footer_left_cont_title {
+        font-size: 35px;
+        max-width: 100%;
+        margin: 0 0 20px;
+    }
+
+    ._coach_footer_top_wrap {
+        padding: 50px 0 0;
+    }
+
+    ._coach_works_group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    ._coach_works_group_txt {
+        text-align: center;
+    }
+}
+/* Mobile */
+@media(max-width:575px) {
+    ._coach_header_herosection_title {
+        font-size: 45px;
+    }
+
+    ._coach_header_herosection_cont_shape2 {
+        width: 110px;
+        right: -52px;
+    }
+
+    ._coach_header_herosection_cont_shape1 {
+        width: 110px;
+    }
+
+    ._coach_header_herosection_btn {
+        font-size: 15px;
+    }
+
+    ._coach_header_herosection_text {
+        font-size: 16px;
+        margin: 15px auto 20px;
+    }
+
+    ._coach_header_hero_marquee_list_item {
+        font-size: 18px;
+    }
+
+    ._coach_header_right_layer {
+        width: 363px;
+        height: 430px;
+        top: 62px;
+    }
+
+    ._coach_features_1_left_shape6 {
+        bottom: -8px;
+        left: 37px;
+    }
+
+    ._coach_features_1_left_shape3 {
+        left: 187px;
+        top: 15px;
+    }
+
+    ._coach_features_1_left_shape4 {
+        left: 257px;
+        top: 106px;
+    }
+
+    ._coach_features_1_left_shape5 {
+        left: 359px;
+        top: 165px;
+    }
+
+    ._coach_features_1_shape {
+        bottom: 10px;
+    }
+
+    ._coach_features_1_right_para {
+        margin: 0 0 20px;
+    }
+
+    ._coach_rating_wrapper {
+        padding: 65px 32px;
+    }
+
+    ._coach_rating_shape2 {
+        bottom: 6px;
+        right: 3px;
+    }
+
+    ._coach_rating_shape1 {
+        top: 6px;
+        left: 3px;
+    }
+
+    ._coach_rating_cont_title {
+        font-size: 25px;
+        margin-bottom: 15px;
+    }
+
+    ._coach_rating_single_star_rating svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    ._coach_rating_star_rating {
+        margin-bottom: 15px;
+        gap: 9px;
+    }
+
+    ._coach_rating_cont_para {
+        font-size: 16px;
+    }
+
+    ._coach_wrapper {
+        margin: 60px 0 0;
+    }
+
+    ._coach_works_wrapper {
+        padding: 50px 0;
+    }
+
+    ._coach_testimonial_title {
+        font-size: 18px;
+        max-width: 70%;
+        margin: 0 auto 25px;
+    }
+
+    ._coach_testimonial_name {
+        font-size: 18px;
+    }
+
+    ._coach_testimonial_smtitle {
+        font-size: 13px;
+    }
+
+    .splide__track {
+        padding: 250px 0 30px;
+    }
+
+    .splide__pagination {
+        left: 42%;
+    }
+
+    .splide__slide img {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    ._coach_testimonial_top_cont {
+        transform: translate(-50%, -60%);
+    }
+
+    ._coach_testimonial_shape_1 svg,
+    ._coach_testimonial_shape_2 svg {
+        width: 50px;
+    }
+
+    ._coach_footer_left_cont_title {
+        font-size: 26px;
+    }
+
+    ._coach_footer_left_cont_btn_link {
+        width: 135px;
+        font-size: 15px;
+    }
+
+    ._coach_footer_btm_txt {
+        text-align: left;
+        padding-top: 20px;
+    }
+
+    ._coach_footer_btm_wrap {
+        padding: 20px 0;
+    }
+
+    ._coach_footer_title {
+        font-size: 20px;
+    }
+}
+
+@media(max-width:420px) {
+    ._coach_header_herosection_cont_shape2 {
+        display: none;
+    }
+
+    ._coach_header_herosection_cont_shape1 {
+        display: none;
+    }
+
+    ._coach_header_wrap {
+        padding: 20px 0 0px;
+    }
+
+    ._coach_header_herosection_title {
+        font-size: 38px;
+    }
+
+    ._coach_header_herosection_rating {
+        padding: 17px 0 20px;
+        font-size: 15px;
+    }
+
+    ._coach_header_herosection_text {
+        font-size: 14px;
+        margin: 15px auto 17px;
+    }
+
+    ._coach_header_herosection_btn {
+        height: 45px;
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
+    ._coach_header_herosection_rating_span svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    ._coach_header_coach_scroll_svg svg {
+        width: 24px;
+        height: 28px;
+    }
+
+    ._coach_header-scroll_title {
+        font-size: 12px;
+    }
+
+    ._coach_header_right_layer {
+        width: 600px;
+        height: 300px;
+        right: -74px;
+        top: 124px;
+    }
+
+    ._coach_header_left_layer {
+        left: -74px;
+        top: 170px;
+        width: 600px;
+        height: 400px;
+    }
+
+    ._coach_header-scroll_bar {
+        margin: 18px 0;
+    }
+
+    ._coach_features_1_shape svg {
+        display: none;
+    }
+
+    ._coach_features_1_wrapper {
+        padding: 130px 0 50px;
+    }
+
+    ._coach_features_1_left_shape6 {
+        bottom: -8px;
+        left: -9px;
+    }
+
+    ._coach_features_1_left_shape2 {
+        left: 80px;
+        top: -47px;
+    }
+
+    ._coach_features_1_left_shape3 {
+        left: 125px;
+        top: 15px;
+    }
+
+    ._coach_features_1_left_shape4 {
+        left: 195px;
+        top: 106px;
+    }
+
+    ._coach_features_1_left_shape5 {
+        left: 290px;
+        top: 143px;
+    }
+
+    ._coach_features_1_left_shape1 {
+        left: 260px;
+        top: -100px;
+    }
+
+    ._coach_features_1_right_btn_link {
+        width: 140px;
+        height: 45px;
+        font-size: 15px;
+    }
+
+    ._coach_features_1_shape {
+        bottom: 0px;
+    }
+
+    ._coach_features_2_wrapper {
+        padding: 40px 0;
+    }
+
+    ._coach_rating_shape1 svg {
+        width: 100px;
+        height: 100px;
+    }
+
+    ._coach_rating_shape2 svg {
+        width: 100px;
+        height: 100px;
+    }
+
+    ._coach_wrapper {
+        margin: 40px 0 0;
+    }
+
+    ._coach_top_cont_title {
+        font-size: 27px;
+    }
+
+    ._coach_features_2_left_title {
+        text-align: center;
+        font-size: 22px;
+        margin: 0 0 12px;
+    }
+
+    ._coach_features_2_left_para {
+        font-size: 15px;
+        margin: 0 0 20px;
+    }
+
+    ._coach_rating_shape1,
+    ._coach_rating_shape2 {
+        display: none;
+    }
+
+    ._coach_rating_wrapper {
+        padding: 40px 32px;
+    }
+
+    ._coach_card {
+        padding: 20px;
+    }
+
+    ._coach_card_top_bg_img_1,
+    ._coach_card_top_bg_img_2,
+    ._coach_card_top_bg_img_3,
+    ._coach_card_top_bg_img_4 {
+        padding-top: 5px;
+    }
+
+    ._coach_card_btm {
+        margin: 16px 0 0;
+    }
+
+    ._coach_card_btm_title {
+        font-size: 20px;
+    }
+
+    ._coach_card_btm_para {
+        font-size: 16px;
+    }
+
+    .splide__track {
+        margin-top: -165px;
+        padding: 230px 0 23px;
+    }
+
+    ._coach_testimonial_top_cont {
+        transform: translate(-50%, -50%);
+    }
+
+    .splide__pagination {
+        left: 39%;
+        bottom: 46px;
+    }
+
+    ._coach_testimonial_title {
+        font-size: 15px;
+        max-width: 90%;
+        margin: 0 auto 17px;
+    }
+
+    ._coach_works_wrapper {
+        padding: 25px 0;
+    }
+
+    ._coach_works_left_title {
+        font-size: 27px;
+        margin: 0 0 12px;
+    }
+
+    ._coach_works_left {
+        padding-bottom: 30px;
+    }
+
+    ._coach_works_group_title {
+        font-size: 18px;
+        margin: 10px 0 6px;
+    }
+
+    ._coach_works_group_txt {
+        font-size: 13px;
+    }
+
+    ._coach_works_shape {
+        bottom: 0;
+        left: 0;
+    }
+
+    ._coach_works_shape svg {
+        display: none;
+    }
+
+    ._coach_testimonial_wrapper {
+        padding: 50px 0 0;
+    }
+
+    ._coach_testimonial_shape_1 svg,
+    ._coach_testimonial_shape_2 svg {
+        display: none;
+    }
+
+    ._coach_footer_top_wrap {
+        padding: 30px 0 0;
+    }
+}
+
+@media(max-width:375px) {
+    ._coach_header_hero_marquee_list_item {
+        font-size: 16px;
+    }
+
+    ._coach_features_1_left_shape1 {
+        left: 245px;
+        top: -72px;
+    }
+
+    ._coach_features_1_left_shape4 {
+        left: 174px;
+        top: 106px;
+    }
+
+    ._coach_features_1_left_shape5 {
+        left: 262px;
+        top: 132px;
+    }
+
+    ._coach_features_1_right_title {
+        font-size: 20px;
+        text-align: center;
+        margin: 0 0 8px;
+    }
+
+    ._coach_features_1_right_para {
+        margin: 0 0 15px;
+        font-size: 15px;
+    }
+
+    ._coach_features_1_wrapper {
+        padding: 100px 0 50px;
+    }
+
+    ._coach_features_2_left_title {
+        text-align: center;
+        font-size: 20px;
+        margin: 0 0 8px;
+    }
+
+    ._coach_features_2_left_para {
+        font-size: 14px;
+        margin: 0 0 15px;
+    }
+
+    ._coach_features_2_left_btn_link {
+        width: 135px;
+        height: 45px;
+        font-size: 15px;
+    }
+
+    ._coach_rating_cont_title {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    ._coach_top_cont_title {
+        font-size: 24px;
+        margin-bottom: 8px;
+    }
+
+    ._coach_top_cont_para {
+        font-size: 15px;
+    }
+
+    ._coach_card_btm_para {
+        font-size: 14px;
+    }
+
+    ._coach_card_btm_title {
+        font-size: 18px;
+    }
+
+    ._coach_card_btm_btn_link {
+        width: 135px;
+        height: 45px;
+        font-size: 15px;
+    }
+
+    ._coach_works_left_title {
+        font-size: 24px;
+        margin: 0 0 8px;
+    }
+
+    ._coach_works_left_para {
+        font-size: 14px;
+    }
+
+    ._coach_works_shape {
+        bottom: -57px;
+        left: 0;
+    }
+
+    ._coach_testimonial_title {
+        max-width: 83%;
+        margin: 0 auto 14px;
+    }
+
+    ._coach_testimonial_name {
+        font-size: 14px;
+        margin: 0 0 4px;
+    }
+
+    .splide__pagination {
+        left: 38%;
+        bottom: 35px;
+    }
+
+    ._coach_testimonial_wrap {
+        padding: 0 0 50px;
+    }
+
+    ._coach_testimonial_smtitle {
+        font-size: 12px;
+    }
+
+    ._coach_footer_left_cont_title {
+        font-size: 22px;
+    }
+
+    ._coach_footer_list_item_link,
+    ._coach_footer_btm_txt,
+    ._coach_footer_btm_link {
+        font-size: 12px;
+    }
+
+    ._coach_footer_btm_wrap {
+        padding: 10px 0;
+    }
+
+    ._coach_footer_btm_txt {
+        padding-top: 15px;
+    }
+
+    ._coach_footer_list_item {
+        margin: 0 0 7px;
+    }
+
+}
+
+/* variable */
+:root {
+    --color1: #FFFFFF;
+    --color2: #000000;
+    --color3: #AFD7B3;
+    --color4: #F0B38C;
+    --color5: #7F7F7F;
+    --color6: #969AAB;
+
+    --bg1: #000000;
+    --bg2: #2C2C2B;
+    --bg3: #D739FE;
+    --bg4: #487DF3;
+    --bg5: #577b5b;
+    --bg6: #9b629b;
+    --bg7: #1c1c1c;
+    --bg8: #CEEFD0;
+    --bg9: #88E68D;
+    --bg10: #FFE1E1;
+    --bg11: #FF9E9E;
+    --bg12: #B9C2F1;
+    --bg13: #8E9EF2;
+    --border: rgba(43, 43, 43, 0.6);
+}
+
+
+
+
